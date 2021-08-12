@@ -1,0 +1,61 @@
+<html>
+<style>
+img{
+border-radius: 50%;
+}
+table {
+ border-spacing: 15px;
+ }
+</style>
+<body background="../images/cc.jpg">
+<font style="font-size:55px;font-family:Broadway;color:#1aa3ff">
+	
+<script type="text/javascript">
+
+function rupeeConverter(){
+document.converter.dollar.value = document.converter.rupee.value * 0.013
+document.converter.pound.value = document.converter.rupee.value * 0.009
+document.converter.yen.value = document.converter.rupee.value * 1.470
+}
+function dollarConverter(){
+document.converter.rupee.value = document.converter.dollar.value * 74.100
+document.converter.pound.value = document.converter.dollar.value * 0.720
+document.converter.yen.value = document.converter.dollar.value * 109.300
+}
+function poundConverter(){
+document.converter.dollar.value = document.converter.pound.value * 1.380
+document.converter.rupee.value = document.converter.pound.value * 102.37
+document.converter.yen.value = document.converter.pound.value * 152.020
+}
+function yenConverter(){
+document.converter.dollar.value = document.converter.yen.value * 0.0092
+document.converter.pound.value = document.converter.yen.value * 0.0066
+document.converter.rupee.value = document.converter.yen.value * 0.680
+}
+
+</script>
+<form name="converter"><br>
+<center>
+<table border="6px solid white" width="10%" cellspacing="0" cellpadding="5">
+<tr bgcolor="#ffffff">
+	<td colspan="2" align="center"><font style="font-size:+25;font-family:arial;color:black;text-shadow:1px 1px aqua"><b>Currency converter</b></font></td></tr>
+<tr><div class="img">
+<td style="background-color: white;"><font color="black">INR (&#8377;)</font></td><td><input style="background-color:#ffffff;border:solid 1px #2f5be0;box-shadow:2px 2px 5px;color:#000000;border-radius:10px;padding-right:275px;padding-bottom:5px;padding-top:5px;"type="text" name="rupee" onChange="rupeeConverter()" /></td>
+</div></tr>
+<tr>
+<td style="background-color: white;"><font color="black">Dollar ($)</font></td><td><input style="background-color:#ffffff;border:solid 1px #2f5be0;box-shadow:2px 2px 5px;color:#000000;border-radius:10px;padding-right:275px;padding-bottom:5px;padding-top:5px;" type="text" name="dollar" onChange="dollarConverter()" /></td>
+</tr>
+<tr>
+<td style="background-color: white;"><font color="black">British Pound (&#163;)</font></td><td><input style="background-color:#ffffff;border:solid 1px #2f5be0;box-shadow:2px 2px 5px;color:#000000;border-radius:10px;padding-right:275px;padding-bottom:5px;padding-top:5px;" type="text" name="pound" onChange="poundConverter()" /></td>
+</tr>
+<tr>
+<td style="background-color: white;"><font color="black">Japanese Yen (&#165;)</font></td><td><input style="background-color:#ffffff;border:solid 1px #2f5be0;box-shadow:2px 2px 5px;color:#000000;border-radius:10px;padding-right:275px;padding-bottom:5px;padding-top:5px;" type="text" name="yen" onChange="yenConverter()" /></td>
+</tr>
+<tr>
+<td colspan="2"><button style="cursor:pointer;padding-left:285px;padding-right:285px;padding-bottom:5px;padding-top:5px;box-shadow: 3px 3px 10px ;color:black; border-radius: 20px;background-color:#ffffff"type="button" value="Convert!" class="signupbtn"><font size="2";><b>Convert<b></font></button>  </td>
+</tr>
+</table>
+</center>
+</form>
+</body>
+</html>

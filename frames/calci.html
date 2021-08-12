@@ -1,0 +1,89 @@
+<html>
+   <head>
+      <script>
+         function dis(val)
+         {
+             document.getElementById("result").value+=val
+        }
+         
+         function solve()
+         {
+             let x = document.getElementById("result").value
+             let y = eval(x)
+             document.getElementById("result").value = y
+         }
+           
+         function clr()
+         {
+             document.getElementById("result").value = ""
+         }
+      </script>
+      
+      <style>
+         .title{
+         margin-bottom: 10px;
+         text-align:center;
+         width: 210px;
+         color:green;
+         border: solid black 2px;
+         }
+  
+         input[type="button"]
+         {
+         background-color:green;
+         color: black;
+         border: solid black 2px;
+         width:100%
+         }
+  
+         input[type="text"]
+         {
+		 text-align:center;
+         background-color:white;
+         border: solid black 2px;
+         width:100%
+         }
+         table {
+         border-spacing: 15px;
+         }
+      </style>
+   </head>
+   <body background= "../images/maths.jpg" style="width:1280px;height:720;">
+      <font style="font-size:55px;font-family:Broadway;color:#1aa3ff">
+	
+      <br><br><br>
+	  <center>
+	  <table border="0">
+         <tr>
+            <td colspan="3"><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:2px 2px 5px;color:#1aa3ff;border-radius:10px;padding-bottom:5px;padding-top:5px;" type="text" id="result"/></td>
+          
+            <td><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:1px 1px 3px;color:#1aa3ff;border-radius:50px;padding-left:10px;padding-right:10px;padding-bottom:5px;padding-top:5px;" type="button" value="c" onclick="clr()"/> </td>
+         </tr>
+         <tr>
+            <td><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:1px 1px 3px;color:#1aa3ff;border-radius:50px;padding-bottom:5px;padding-top:5px;" type="button" value="1" onclick="dis('1')"/> </td>
+            <td><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:1px 1px 3px;color:#1aa3ff;border-radius:50px;padding-bottom:5px;padding-top:5px;" type="button" value="2" onclick="dis('2')"/> </td>
+            <td><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:1px 1px 3px;color:#1aa3ff;border-radius:50px;padding-bottom:5px;padding-top:5px;" type="button" value="3" onclick="dis('3')"/> </td>
+            <td><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:1px 1px 3px;color:#1aa3ff;border-radius:50px;padding-bottom:5px;padding-top:5px;" type="button" value="/" onclick="dis('/')"/> </td>
+         </tr>
+         <tr>
+            <td><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:1px 1px 3px;color:#1aa3ff;border-radius:50px;padding-bottom:5px;padding-top:5px;" type="button" value="4" onclick="dis('4')"/> </td>
+            <td><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:1px 1px 3px;color:#1aa3ff;border-radius:50px;padding-bottom:5px;padding-top:5px;" type="button" value="5" onclick="dis('5')"/> </td>
+            <td><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:1px 1px 3px;color:#1aa3ff;border-radius:50px;padding-bottom:5px;padding-top:5px;" type="button" value="6" onclick="dis('6')"/> </td>
+            <td><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:1px 1px 3px;color:#1aa3ff;border-radius:50px;padding-bottom:5px;padding-top:5px;" type="button" value="-" onclick="dis('-')"/> </td>
+         </tr>
+         <tr>
+            <td><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:1px 1px 3px;color:#1aa3ff;border-radius:50px;padding-bottom:5px;padding-top:5px;" type="button" value="7" onclick="dis('7')"/> </td>
+            <td><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:1px 1px 3px;color:#1aa3ff;border-radius:50px;padding-bottom:5px;padding-top:5px;" type="button" value="8" onclick="dis('8')"/> </td>
+            <td><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:1px 1px 3px;color:#1aa3ff;border-radius:50px;padding-bottom:5px;padding-top:5px;" type="button" value="9" onclick="dis('9')"/> </td>
+            <td><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:1px 1px 3px;color:#1aa3ff;border-radius:50px;padding-bottom:5px;padding-top:5px;" type="button" value="+" onclick="dis('+')"/> </td>
+         </tr>
+         <tr>
+            <td><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:1px 1px 3px;color:#1aa3ff;border-radius:50px;padding-bottom:5px;padding-top:5px;" type="button" value="." onclick="dis('.')"/> </td>
+            <td><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:1px 1px 3px;color:#1aa3ff;border-radius:50px;padding-bottom:5px;padding-top:5px;" type="button" value="0" onclick="dis('0')"/> </td>
+            <td><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:1px 1px 3px;color:#1aa3ff;border-radius:50px;padding-bottom:5px;padding-top:5px;" type="button" value="=" onclick="solve()"/> </td>
+            <td><input style="background-color:#111212;border:solid 1px #2f5be0;box-shadow:1px 1px 3px;color:#1aa3ff;border-radius:50px;padding-bottom:5px;padding-top:5px;" type="button" value="*" onclick="dis('*')"/> </td>
+         </tr>
+      </table>
+    </center>
+   </body>
+</html>

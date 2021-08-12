@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login form</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet'
+    type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <style>
+    html,
+    body {
+      display: flex;
+      justify-content: center;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 15px;
+    }
+
+    form {
+      border: 5px solid #f1f1f1;
+    }
+
+    input[type=text],
+    input[type=password] {
+      width: 100%;
+      padding: 16px 8px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #424fbf;
+      color: white;
+      padding: 14px 0;
+      margin: 10px 0;
+      border: none;
+      cursor: grabbing;
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 18;
+    }
+
+    button:hover {
+      opacity: 0.50;
+    }
+
+    .formcontainer {
+      text-align: left;
+      margin: 24px 50px 12px;
+    }
+
+    .container {
+      padding: 16px 0;
+      text-align: left;
+      color: blanchedalmond;
+      border-radius: 8px;
+    }
+
+    span.psw {
+      float: right;
+      padding-top: 0;
+      padding-right: 15px;
+    }
+
+    a {
+      text-decoration: none;
+      color: blanchedalmond;
+    }
+
+    @media screen and (max-width: 300px) {
+      span.psw {
+        display: block;
+        float: none;
+      }
+    }
+      form{
+        align-items: center;
+        padding-top: 50px;
+        border-radius: 8px;
+      }
+      
+      input{
+        border-radius: 10px;
+      }
+
+      label .uname{
+        border-radius: 10px;
+      }
+      
+  </style>
+  <script>
+function val(){
+var n=document.getElementById("name");
+var e=document.getElementById("psw");
+
+var patt_name=/^([a-z0-9\._]+)@([a-z]+).([a-z]{2,3})$/;
+var patt_psw=/^[A-Za-z]\w{7,14}$/;
+
+if(n.value==""){
+alert("Email is not entered");
+n.style.border="2px solid red";
+return false;
+}
+else {
+	if(e.value==""){
+	alert("Password is not entered");
+	e.style.border="2px solid red";
+	return false;
+	}
+	else{
+			if(patt_name.test(n.value)){
+										if(patt_psw.test(e.value)){
+													alert("Data submitted");
+													return true;
+													}
+										else{
+											alert("Not in format");
+											e.style.border="2px solid red";
+											return false;
+											}
+										}
+			else{
+			alert("Not in format");
+			n.style.border="2px solid red";
+			return false;
+			}
+		}
+}
+
+
+
+
+}
+</script>
+</head>
+
+
+<body background="../images/bg1.jpg">
+
+
+    <br><br><br><br>
+    <form action="/action_page.php" onsubmit="return val()" action="pratik102agrawal@gmail.com?subject=Userdata" method="POST" enctype="text/plain">
+    <font color="#FFB1E9">
+    <font style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;">  <h1>Login</h1></font>
+    </font>
+    <div class="formcontainer">
+      <hr />
+      <div class="container">
+        <label for="uname"><strong><u>Email</u></strong></label>
+        <input style="border-radius: 10px; " type="text" placeholder="Enter Email" name="name" id="name" required>
+        <label for="psw"><strong><u>Password</u></strong></label>
+        <input style="border-radius: 10px; " type="password" placeholder="Enter Password (7-14 characters)" type="text" name="psw" id="psw" required>
+      </div>
+      <button type="submit">Login</button>
+      <div class="container">
+        <label style="padding-left: 15px">
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+        <font color="blanchedalmond"><span class="psw"><a href="#" class="forgot"> Forgot password?</a></span></font>
+      </div>
+  </form>
+
+</body>
+
+</html>

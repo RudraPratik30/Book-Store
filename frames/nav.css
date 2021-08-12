@@ -1,0 +1,19 @@
+body{
+    margin-top: 20px;
+    margin-left: 10px;
+	padding: 10px;
+	line-height: 1.5em;
+	font-family: Verdana, Arial, san-serif;
+	font-size: 11px;
+	background: #05e3f373;
+}
+
+a:link, a:visited { color: #f1003c; text-decoration: none; font-weight: bold; font-size: small;} 
+a:active, a:hover { color: #00aff5; text-decoration: underline; font-size: small;}
+
+h3{
+    margin: 0;
+	padding: 0;
+    font-size: 15px;
+    color: #a305ff;
+}
